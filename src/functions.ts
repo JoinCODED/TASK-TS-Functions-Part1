@@ -6,6 +6,7 @@
  */
 function printName(name: string): void {
   // write your code here
+  console.log(name);
 }
 
 /**
@@ -17,8 +18,10 @@ function printName(name: string): void {
  */
 function printAge(birthYear: number): number {
   // write your code here
+  const age = 2025 - birthYear;
+  console.log(age);
 
-  return -1; // replace -1 to what you see is fit
+  return age; // replace -1 to what you see is fit
 }
 
 // example:
@@ -42,8 +45,25 @@ type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): string {
   // write your code here
+  let greeting = "";
+  switch (language) {
+    case "en":
+      greeting = `Hello ${name}`;
+      break;
+    case "es":
+      greeting = `Hola ${name}`;
+      break;
+    case "fr":
+      greeting = `Bonjour ${name}`;
+      break;
+    case "tr":
+      greeting = `Merhaba ${name}`;
+      break;
+  }
 
-  return ""; // replace the empty string with what you see is fit
+  console.log(greeting);
+
+  return greeting; // replace the empty string with what you see is fit
 }
 
 // example:
@@ -60,8 +80,9 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  */
 function printMax(x: number, y: number): number {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+  const biggerNum = x > y ? x : y;
+  console.log(biggerNum);
+  return biggerNum; // replace -1 to what you see is fit
 }
 
 // example:

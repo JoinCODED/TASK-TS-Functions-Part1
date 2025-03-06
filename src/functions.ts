@@ -18,7 +18,8 @@ function printName(name: string): void {
  */
 function printAge(birthYear: number): number {
   // write your code here
-  const age = 2025 - birthYear;
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
   console.log(age);
 
   return age; // replace -1 to what you see is fit

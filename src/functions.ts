@@ -1,4 +1,5 @@
 /**
+ * Heba, Abdulrahman
  * Task 1:
  * Create a function named `printName`
  * - Accepts a "name" parameter of type "string"
@@ -6,6 +7,7 @@
  */
 function printName(name: string): void {
   // write your code here
+  console.log(name)
 }
 
 /**
@@ -17,8 +19,11 @@ function printName(name: string): void {
  */
 function printAge(birthYear: number): number {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+  const currentDate = new Date() 
+  const currentYear = currentDate.getFullYear()
+  let age = currentYear - birthYear
+  console.log(age)
+  return age; // replace -1 to what you see is fit
 }
 
 // example:
@@ -42,8 +47,29 @@ type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): string {
   // write your code here
-
-  return ""; // replace the empty string with what you see is fit
+  let output:string = ""
+  switch (language){
+    case "en":
+      console.log(`Hello ${name}`)
+      output = `Hello ${name}`
+      break
+    case "es":
+      console.log(`Hola ${name}`)
+      output = `Hola ${name}`
+      break
+    case "fr":
+      console.log(`Bonjour ${name}`)
+      output = `Bonjour ${name}`
+      break
+    case "tr":
+      console.log(`Merhaba ${name}`)
+      output = `Merhaba ${name}`
+      break
+    default:
+      console.log("")
+      break
+  }
+  return output; // replace the empty string with what you see is fit
 }
 
 // example:
@@ -60,7 +86,8 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  */
 function printMax(x: number, y: number): number {
   // write your code here
-
+  if(x<y) console.log(y)
+  else console.log(x)
   return -1; // replace -1 to what you see is fit
 }
 

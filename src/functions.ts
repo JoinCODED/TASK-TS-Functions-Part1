@@ -63,9 +63,12 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  */
 function printMax(x: number, y: number): number {
   // write your code here
-// if (x > y) { return x}
-// else if (y > x) { return y}
-  return x; // replace -1 to what you see is fit
+// if (x >= y) { return x}
+// else if (y >= x) { return y}
+var BigNum = Math.max(x,y)
+// if (x > y || y > x) {return BigNum}
+console.log(BigNum)
+  return -1 ; // replace -1 to what you see is fit
 }
 
 // example:

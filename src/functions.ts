@@ -6,6 +6,7 @@
  */
 function printName(name: string): void {
   // write your code here
+  console.log(name)
 }
 
 /**
@@ -17,13 +18,12 @@ function printName(name: string): void {
  */
 function printAge(birthYear: number): number {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+console.log(2025 - birthYear)
+  return 2025 - birthYear; // replace -1 to what you see is fit
 }
 
 // example:
 printAge(2000); // => 2025 (2025 - 2000)
-
 /**
  * Task 3:
  * Create a function named `printHello`
@@ -42,8 +42,11 @@ type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): string {
   // write your code here
-
-  return ""; // replace the empty string with what you see is fit
+  if (language == "en") { return "Hello " + name}
+  else if (language == "es") { return "Hola " + name}
+  else if (language == "fr") { return "Bonjour " + name}
+  else if (language == "tr") { return "Merhaba " + name}
+  return  ""; // replace the empty string with what you see is fit
 }
 
 // example:
@@ -60,8 +63,12 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  */
 function printMax(x: number, y: number): number {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+// if (x >= y) { return x}
+// else if (y >= x) { return y}
+var BigNum = Math.max(x,y)
+// if (x > y || y > x) {return BigNum}
+console.log(BigNum)
+  return -1 ; // replace -1 to what you see is fit
 }
 
 // example:

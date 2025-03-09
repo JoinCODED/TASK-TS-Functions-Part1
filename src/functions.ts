@@ -6,6 +6,7 @@
  */
 function printName(name: string): void {
   // write your code here
+  console.log(name);
 }
 
 /**
@@ -17,8 +18,10 @@ function printName(name: string): void {
  */
 function printAge(birthYear: number): number {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+  let year = (new Date()).getFullYear();
+  let age: number = year - birthYear;
+  console.log(age);
+  return age; // replace -1 to what you see is fit
 }
 
 // example:
@@ -41,7 +44,28 @@ printAge(2000); // => 2025 (2025 - 2000)
 type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): string {
+
+  const languages: Record<LanguageType, string> = {
+    en: "Hello",
+    es: "Hola",
+    fr: "Bonjour",
+    tr: "Merhaba",
+  };
+
   // write your code here
+  if(language == "en") {
+    console.log(`${languages.en} ${name}`);
+    return languages.en + ` ` + name;
+  }else if(language == "es"){
+    console.log(`Hola ${name}`);
+    return languages.es + ` ` + name;
+  }else if(language == "fr"){
+    console.log(`Bonjour ${name}`);
+    return languages.fr + ` ` + name;
+  }else if(language == "tr"){
+    console.log(`.tr} ${name}`);
+    return languages.tr + ` ` + name;
+  }
 
   return ""; // replace the empty string with what you see is fit
 }
@@ -58,10 +82,11 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  * - Accepts a "y" parameter of type "number"
  * - should print out the bigger number
  */
-function printMax(x: number, y: number): number {
+function printMax(x: number, y: number): void {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
+  let max = Math.max(x,y);
+  console.log(max);
+  // return -1; // replace -1 to what you see is fit
 }
 
 // example:

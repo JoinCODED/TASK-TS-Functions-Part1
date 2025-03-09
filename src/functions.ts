@@ -21,7 +21,6 @@ function printAge(birthYear: number): number {
   const currentYear = new Date().getFullYear();
   const age = currentYear - birthYear;
   console.log(age);
-
   return age; // replace -1 to what you see is fit
 }
 
@@ -61,9 +60,6 @@ function printHello(name: string, language: LanguageType): string {
       greeting = `Merhaba ${name}`;
       break;
   }
-
-  console.log(greeting);
-
   return greeting; // replace the empty string with what you see is fit
 }
 
@@ -81,7 +77,7 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  */
 function printMax(x: number, y: number): number {
   // write your code here
-  const biggerNum = x > y ? x : y;
+  const biggerNum = Math.max(x, y);
   console.log(biggerNum);
   return biggerNum; // replace -1 to what you see is fit
 }

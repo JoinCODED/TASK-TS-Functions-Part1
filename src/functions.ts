@@ -45,22 +45,16 @@ type LanguageType = "en" | "es" | "fr" | "tr";
 
 function printHello(name: string, language: LanguageType): string {
   // write your code here
-  let greeting = "";
   switch (language) {
     case "en":
-      greeting = `Hello ${name}`;
-      break;
+      return `Hello ${name}`;
     case "es":
-      greeting = `Hola ${name}`;
-      break;
+      return `Hola ${name}`;
     case "fr":
-      greeting = `Bonjour ${name}`;
-      break;
+      return `Bonjour ${name}`;
     case "tr":
-      greeting = `Merhaba ${name}`;
-      break;
-  }
-  return greeting; // replace the empty string with what you see is fit
+      return `Merhaba ${name}`;
+  } // replace the empty string with what you see is fit
 }
 
 // example:

@@ -6,7 +6,6 @@
  */
 function printName(name: string): void {
   console.log(name);
-  
 }
 
 /**
@@ -17,8 +16,7 @@ function printName(name: string): void {
  * - Age = current year - birth
  */
 function printAge(birthYear: number): number {
-  console.log(new Date().getFullYear()-birthYear);
-  
+  console.log(new Date().getFullYear() - birthYear);
 
   return -1; // replace -1 to what you see is fit
 }
@@ -41,27 +39,21 @@ printAge(2000); // => 2025 (2025 - 2000)
 
 // don't make any changes to LanguageType
 type LanguageType = "en" | "es" | "fr" | "tr";
-;
-
 function printHello(name: string, language: LanguageType): string {
-  var greeting = ""
- switch(language)
- {
-  case "en":
-    greeting =`Hello ${name}`;
-  break;
-  case "es":
-    greeting =`Hola ${name}`;
-    break;
-    case "fr":
-      greeting =`Bonjour ${name}`;
+  var greeting = "";
+  switch (language) {
+    case "en":
+      greeting = `Hello ${name}`;
       break;
-      case "tr":
-        greeting =`Merhaba ${name}`;
-
- }
- 
-  
+    case "es":
+      greeting = `Hola ${name}`;
+      break;
+    case "fr":
+      greeting = `Bonjour ${name}`;
+      break;
+    case "tr":
+      greeting = `Merhaba ${name}`;
+  }
 
   return greeting; // replace the empty string with what you see is fit
 }
@@ -81,13 +73,10 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
 
 function printMax(x: number, y: number): number {
   // write your code here
-    
-    if(x>y)
-      console.log(x);
-    if(y>x)
-      console.log(y);
-      ; 
-     return -1// replace -1 to what you see is fit
+
+  if (x > y) console.log(x);
+  if (y > x) console.log(y);
+  return -1; // replace -1 to what you see is fit
 }
 
 // example:
